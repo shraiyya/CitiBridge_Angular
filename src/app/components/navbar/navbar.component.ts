@@ -51,6 +51,11 @@ export class NavbarComponent implements OnInit {
 
     }
 
+    logout(){
+      sessionStorage.clear();
+      this.router.navigate(["/login"]);
+    }
+
     sidebarOpen() {
         const toggleButton = this.toggleButton;
         const mainPanel =  <HTMLElement>document.getElementsByClassName('main-panel')[0];

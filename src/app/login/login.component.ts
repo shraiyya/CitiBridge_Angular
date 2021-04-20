@@ -27,6 +27,7 @@ export class LoginComponent implements OnInit {
     } else {
       this.hasError = false;
       sessionStorage.setItem("isLoggedIn","true");
+      this.myRoute.navigate(["/dashboard"]);
     }
   }
   //   let temp:UserMaster = { userId: this.userName, password: btoa(this.password.split('').reverse().join('')) };

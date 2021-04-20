@@ -5,11 +5,13 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { LoginComponent } from './login/login.component';
+import { AuthguardService } from './authguard.service';
 
 const routes: Routes =[
   {
     path: '',
     redirectTo: 'dashboard',
+    canActivate : [AuthguardService],
     pathMatch: 'full',
   }, {
     path: 'login',
